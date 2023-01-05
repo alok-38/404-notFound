@@ -107,6 +107,7 @@ body {
   -webkit-transition: all 1s ease;
   opacity: 0.8;
   margin-right: 5rem;
+  margin-top: auto;
 }
 
 .illustration:hover {
@@ -131,7 +132,6 @@ body {
   justify-content: space-between;
   font-family: "Space Mono", sans-serif;
   width: 100%;
-  margin-left: auto;
 }
 
 .title {
@@ -139,14 +139,15 @@ body {
   line-height: 80px;
   letter-spacing: -0.035em;
   color: var(--dark);
+  width: 100%;
 }
 
 .infos {
   font-weight: normal;
   font-size: 1.5em;
-  line-height: 36px;
+  line-height: 40px;
   letter-spacing: -0.035em;
-  max-width: 381px;
+  width: 90%;
   padding: 2.57rem 0 4.57rem 0;
   color: var(--dark-gray);
 }
@@ -165,6 +166,10 @@ body {
   text-align: center;
 }
 
+.footer a {
+  font-size: .75rem;
+}
+
 .dev-challenges-profile {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
@@ -179,7 +184,7 @@ body {
 .header .logo {
   font-family: "Inconsolata", sans-serif;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 1.5rem;
   letter-spacing: -0.08em;
   text-transform: uppercase;
 }
@@ -204,15 +209,13 @@ a.button-homepage {
   color: #fff;
   border-radius: 8px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
-  padding: 2rem;
-  /* min-width: 10ch; */
+  padding: 1.75rem;
   width: 100%;
-  min-height: 44px;
   text-align: center;
   line-height: 1.1;
   transition: 220ms all ease-in-out;
-  margin: auto;
   text-transform: uppercase;
+  margin-bottom: auto;
 }
 
 a.button-homepage:hover {
@@ -228,6 +231,54 @@ a.button-homepage:focus {
 /* Media Query */
 @media screen and (max-width: 1280px) {
   .container {
-    transform: scale(.9);
+    transform: scale(.7);
+  }
+}
+
+/* MOBILE */
+@media screen and (max-width: 1050px) {
+  body {
+    padding: 1.42rem 1.71rem;
+    height: 100%;
+  }
+
+  .container {
+    transform: scale(.5);
+    flex-direction: column;
+    margin-bottom: 6.85rem;
+  }
+
+  .illustration {
+    margin: 4.57rem 0 4.2rem 0;
+    height: auto;
+  }
+
+  .illustration img {
+    width: 100%;
+  }
+
+  .error {
+    margin: auto;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 4.75rem;
+    line-height: 71px;
+    margin:0;
+    width: 100%;
+  }
+
+  .infos {
+    font-size: 1.5rem;
+    line-height: 27px;
+    padding: 2rem 0 4.78rem 0;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .button-homepage {
+    width: 100%;
+    margin: 0;
   }
 }
