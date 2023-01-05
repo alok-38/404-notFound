@@ -75,41 +75,111 @@ h6 {
   isolation: isolate;
 }
 
-/* Section Image */
-.illustration {
-  width: 50%;
-  border-radius: 50%;
+/* End of Reset */
+
+/* Variables */
+:root {
+  --dark: #333;
+  --dark-gray: #4F4F4F;
+  --white: #fff;
 }
 
-@media screen and (max-width: 480px) {
+/* Body */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.85rem 5.5rem;
+  background: var(--white);
+}
 
-  body {
-    height: 100vh;
-    overflow: hidden;
-  }
+/* Image Hover Effect */
 
-  .logo {
-    text-align: center;
-    font-size: 5ch;
-    margin-top: 1rem;
-  }
 
-  .illustration {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin: 2rem 0 2rem 0;
-  }
+/* Section Image */
+.illustration {
+  width: 100%;
+  border-radius: 50%;
+  filter: grayscale(25%);
+  -webkit-filter: grayscale(25%);
+  -webkit-transition: all 1s ease;
+  opacity: 0.8;
+  margin-right: 5rem;
+}
 
-  .error {
-    margin-bottom: 1rem;
-    text-align: center;
-  }
+.illustration:hover {
+  filter: grayscale(0%);
+  filter: var(--dark-gray);
+  -webkit-filter: grayscale(0%);
+  filter: none;
+  transition: 1s ease;
+  opacity: 1;
+}
 
-  .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
+/* End of hover effects */
+
+.illustration img {
+  width: 100%;
+  height: auto;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Space Mono", sans-serif;
+  width: 100%;
+}
+
+.title {
+  font-size: 4em;
+  line-height: 95px;
+  letter-spacing: -0.035em;
+  color: var(--dark);
+}
+
+.infos {
+  font-weight: normal;
+  font-size: 1.5em;
+  line-height: 36px;
+  letter-spacing: -0.035em;
+  max-width: 381px;
+  padding: 2.57rem 0 4.57rem 0;
+  color: var(--dark-gray);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.header .logo {
+  font-family: "Inconsolata", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  letter-spacing: -0.08em;
+  text-transform: uppercase;
+}
+
+.logo {
+  text-align: center;
+  color: var(--dark);
+}
+
+/* Media Query */
+@media screen and (max-width: 1280px) {
+  .container {
+    transform: scale(.9);
   }
 }
