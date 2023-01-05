@@ -131,11 +131,12 @@ body {
   justify-content: space-between;
   font-family: "Space Mono", sans-serif;
   width: 100%;
+  margin-left: auto;
 }
 
 .title {
   font-size: 4em;
-  line-height: 95px;
+  line-height: 80px;
   letter-spacing: -0.035em;
   color: var(--dark);
 }
@@ -164,6 +165,17 @@ body {
   text-align: center;
 }
 
+.dev-challenges-profile {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.header {
+  align-self: flex-start;
+}
+
 .header .logo {
   font-family: "Inconsolata", sans-serif;
   font-weight: bold;
@@ -175,6 +187,42 @@ body {
 .logo {
   text-align: center;
   color: var(--dark);
+}
+
+/* Button */
+.button-homepage {
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+a.button-homepage {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: start;
+  background-color: #3e68ff;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+  padding: 2rem;
+  /* min-width: 10ch; */
+  width: 100%;
+  min-height: 44px;
+  text-align: center;
+  line-height: 1.1;
+  transition: 220ms all ease-in-out;
+  margin: auto;
+  text-transform: uppercase;
+}
+
+a.button-homepage:hover {
+  background-color: #0029be;
+}
+
+a.button-homepage:focus {
+  outline-style: solid;
+  outline-color: transparent;
+  box-shadow: 0 0 0 4px #0029be;
 }
 
 /* Media Query */
